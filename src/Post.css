@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #88c4e8;
+    position: relative;
+    height: 90vh;
+}
+
+.post-wrapper{
+    width: 99vw;
+    max-width: 800px;
+    background-color: #235675;
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
+
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.post-title{
+    color: #f0ead6;
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding: 8% 4%;
+    margin: 0;
+    text-shadow: 3px 4px rgba(0, 0, 0, .2);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.post-link-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+}
+.post-link{
+    color: gray;
+    margin: 0 auto;
+}

@@ -1,10 +1,10 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import {Post} from "./Post";
+import {Header} from "./Header";
 
 export interface RedditPost {
   permaLink: string;
-  thumbNail: string;
   title: string;
 }
 
@@ -20,9 +20,8 @@ const preProcessPosts = (rawPosts: any[]): RedditPost[] => {
 
     const title = data["title"];
     const permaLink = preProcessPermaLink(data["permalink"]);
-    const thumbNail = data["thumbnail"];
 
-    return {permaLink, thumbNail, title}
+    return {permaLink, title}
   })
 };
 
@@ -52,7 +51,7 @@ const App = () => {
   const postToShow = selectRandomPost(posts);
   return (
     <div>
-      <h1>Fun Fact</h1>
+      <Header />
       {posts.length !== 0 ? <Post post={postToShow} /> : <></>}
     </div>
   );
