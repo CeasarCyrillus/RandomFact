@@ -8,16 +8,16 @@ body{
 
 .post-wrapper{
     width: 99vw;
-    max-width: 800px;
+    max-width: 900px;
     background-color: #235675;
     border-radius: 15px;
     box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
 
     margin: 0;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
 }
 
 .post-title{
