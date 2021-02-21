@@ -2,3 +2,38 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 90vh;
+
+  background:
+          radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, var(--secondary-header-bg-color) 10px, rgba(96, 16, 48, 0) 11px) 0 10px,
+          radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, var(--secondary-header-bg-color) 10px, rgba(96, 16, 48, 0) 11px),
+          var(--main-background-color);
+  background-size: 20px 20px;
+
+  animation-name: movearound;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+}
+
+@keyframes movearound {
+  from{
+    background-position-x: 0;
+  }
+  to{
+    background-position-x: 1024px;
+  }
+}
+
+:root {
+  --primary-header-bg-color: #202e45;
+  --secondary-header-bg-color: #235675;
+  --main-background-color: #88c4e8;
+  --text-color: #f0ead6;
+  --post-bg-color: #235675;
+}

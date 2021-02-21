@@ -1,7 +1,7 @@
 .header-wrapper{
     margin: 0;
     padding: 0;
-    color: #f0ead6;
+    color: var(--text-color);
     font-family: 'Yanone Kaffeesatz', sans-serif;
     letter-spacing: 2px;
     box-shadow: 0 5px 15px 4px rgba(0, 0, 0, .3);
@@ -14,11 +14,14 @@
 
 .primary-header{
     margin: 0;
-    background-color: #202e45;
+}
+
+.primary-header{
+    background-color: var(--primary-header-bg-color);
 }
 
 .secondary-header {
-    background-color: #235675;
+    background-color: var(--secondary-header-bg-color)
 }
 
 .header-icon {

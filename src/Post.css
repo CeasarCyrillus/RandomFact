@@ -1,33 +1,7 @@
-body{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    height: 90vh;
-
-    background:
-            radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #235675 10px, rgba(96, 16, 48, 0) 11px) 0 10px,
-            radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #235675 10px, rgba(96, 16, 48, 0) 11px),
-            #88c4e8;
-    background-size: 20px 20px;
-
-    animation-name: movearound;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 60s;
-}
-
-@keyframes movearound {
-    from{
-        background-position-x: 0;
-    }
-    to{
-        background-position-x: 1024px;
-    }
-}
 .post-wrapper{
     width: 99vw;
     max-width: 900px;
-    background-color: #235675;
+    background-color: var(--post-bg-color);
     border-radius: 15px;
     box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
 
@@ -39,7 +13,7 @@ body{
 }
 
 .post-title{
-    color: #f0ead6;
+    color: var(--text-color);
     font-size: 40px;
     letter-spacing: 1px;
     padding: 8% 4%;
