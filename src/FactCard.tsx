@@ -5,18 +5,11 @@ import factsJson from "./facts.json";
 
 const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 export const FactCard = () => {
-  const getFactIndexFromUrl = () => {
-    if (window.location.hash.length <= 0) {
-      return 0;
-    }
-    return Number(window.location.hash.slice(1)) - 1;
-  };
-
-  const [factIndex, setFactIndex] = useState<number>(getFactIndexFromUrl());
+  const [factIndex, setFactIndex] = useState<number>(getFactIndexFromUrl() ?? random(0, factsJson.numberOfFacts - 1));
 
   useEffect(() => {
     const onHashChange = () => {
-      setFactIndex(getFactIndexFromUrl());
+      setFactIndex(getFactIndexFromUrl() ?? random(0, factsJson.numberOfFacts - 1));
     }
 
     window.addEventListener("hashchange", onHashChange);
@@ -68,3 +61,10 @@ export const FactCard = () => {
     </div>
   </div>;
 }
+
+const getFactIndexFromUrl = () => {
+  if (window.location.hash.length <= 0) {
+    return null;
+  }
+  return Number(window.location.hash.slice(1)) - 1;
+};
