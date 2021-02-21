@@ -31,3 +31,14 @@
     color: gray;
     margin: 0 auto;
 }
+
+.post-buttons-wrapper {
+    width: 100%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-button {
+    font-size: 60px;
+}

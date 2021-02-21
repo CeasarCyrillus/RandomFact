@@ -25,17 +25,18 @@ const preProcessPosts = (rawPosts: any[]): RedditPost[] => {
   })
 };
 
-const selectRandomPost = (posts: RedditPost[]) => {
+const selectRandomPostIndex = (posts: RedditPost[]) => {
   const maxIndex = posts.length - 1;
   const randomIndex = Math.floor(Math.random() * maxIndex)
-  return posts[randomIndex];
+  return randomIndex
 };
 
 const App = () => {
   const [posts, setPosts] = useState<RedditPost[]>([]);
+  const [postIndex, setPostIndex] = useState<number>(0);
 
   const fetchTopPosts = useCallback(async () => {
-    const url = "https://www.reddit.com/r/todayilearned/new.json";
+    const url = "https://www.reddit.com/r/todayilearned/top.json";
     const response = await fetch(url);
     const json = await response.json();
     return json["data"]["children"];
@@ -48,11 +49,22 @@ const App = () => {
        setPosts(posts)
      });
   }, [fetchTopPosts]);
-  const postToShow = selectRandomPost(posts);
+
+  const postNavigationOnClick = (direction: number) => {
+    setPostIndex(postIndex + direction);
+  }
+
   return (
     <div>
       <Header />
-      {posts.length !== 0 ? <Post post={postToShow} /> : <></>}
+      {posts.length !== 0 ?
+        <Post
+          post={posts[postIndex]}
+          postNavigationOnClick={postNavigationOnClick}
+          currentPostIndex={postIndex}
+          numberOfPosts={posts.length}/>
+          : <></>
+      }
     </div>
   );
 };
