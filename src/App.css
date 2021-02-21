@@ -31,9 +31,9 @@ body{
 }
 
 :root {
-  --primary-header-bg-color: #202e45;
-  --secondary-header-bg-color: #235675;
-  --main-background-color: #88c4e8;
-  --text-color: #f0ead6;
-  --post-bg-color: #235675;
+  --primary-header-bg-color: #333232;
+  --secondary-header-bg-color: #4D4B4B;
+  --main-background-color: #BAC7BE;
+  --post-bg-color: #333232;
+  --text-color: #BAC7BE;
 }
