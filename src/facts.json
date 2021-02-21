@@ -1,0 +1,14 @@
+{
+  "facts": [
+    {
+      "id": 0,
+      "text": "Tobacco companies spend the most money on advertising during the month of January, when more people will be attempting to quit smoking, as New Year’s resolutions.",
+      "source": "https://en.wikipedia.org/wiki/Nicotine_marketing"
+    },
+    {
+      "id": 1,
+      "text": "the sky is blue",
+      "source": "www.example.com"
+    }
+  ]
+}

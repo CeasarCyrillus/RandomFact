@@ -1,7 +1,7 @@
 .post-wrapper{
     width: 99vw;
     max-width: 900px;
-    background-color: var(--post-bg-color);
+    background-color: var(--fact-card-bg-color);
     border-radius: 15px;
     box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
 
