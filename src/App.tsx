@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import {Post} from "./Post";
 import {Header} from "./Header";
+import {ErrorBoundary} from "./ErrorBoundary";
 
 export interface RedditPost {
   permaLink: string;
@@ -55,17 +56,19 @@ const App = () => {
   }
 
   return (
-    <div>
-      <Header />
-      {posts.length !== 0 ?
-        <Post
-          post={posts[postIndex]}
-          postNavigationOnClick={postNavigationOnClick}
-          currentPostIndex={postIndex}
-          numberOfPosts={posts.length}/>
-          : <></>
-      }
-    </div>
+    <ErrorBoundary>
+      <div>
+        <Header />
+        {posts.length !== 0 ?
+          <Post
+            post={posts[postIndex]}
+            postNavigationOnClick={postNavigationOnClick}
+            currentPostIndex={postIndex}
+            numberOfPosts={posts.length}/>
+            : <></>
+        }
+      </div>
+    </ErrorBoundary>
   );
 };
 
