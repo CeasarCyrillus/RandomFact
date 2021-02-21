@@ -29,7 +29,7 @@ export const Post = (props: Props) =>
 
     <div className={"post-link-wrapper"}>
       <a className={"post-link"} href={props.post.permaLink} target="_blank">
-        see this post on reddit.com
+        see this post on /r/todayilearned
       </a>
     </div>
   </div>

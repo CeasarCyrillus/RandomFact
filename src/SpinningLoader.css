@@ -1,0 +1,20 @@
+.spinning-loader-wrapper {
+    color: var(--post-bg-color);
+    font-size: 15vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 1;
+
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

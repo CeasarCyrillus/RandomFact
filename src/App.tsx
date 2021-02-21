@@ -3,6 +3,7 @@ import './App.css';
 import {Post} from "./Post";
 import {Header} from "./Header";
 import {ErrorBoundary} from "./ErrorBoundary";
+import {SpinningLoader} from "./SpinningLoader";
 
 export interface RedditPost {
   permaLink: string;
@@ -65,7 +66,7 @@ const App = () => {
             postNavigationOnClick={postNavigationOnClick}
             currentPostIndex={postIndex}
             numberOfPosts={posts.length}/>
-            : <></>
+            : <SpinningLoader />
         }
       </div>
     </ErrorBoundary>
