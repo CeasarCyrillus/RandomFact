@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/RandomFact/static/css/main.80f37d0f.chunk.css",
-    "main.js": "/RandomFact/static/js/main.c1a0a095.chunk.js",
-    "main.js.map": "/RandomFact/static/js/main.c1a0a095.chunk.js.map",
-    "runtime-main.js": "/RandomFact/static/js/runtime-main.c4fa94c9.js",
-    "runtime-main.js.map": "/RandomFact/static/js/runtime-main.c4fa94c9.js.map",
-    "static/js/2.23ce9665.chunk.js": "/RandomFact/static/js/2.23ce9665.chunk.js",
-    "static/js/2.23ce9665.chunk.js.map": "/RandomFact/static/js/2.23ce9665.chunk.js.map",
-    "index.html": "/RandomFact/index.html",
-    "static/css/main.80f37d0f.chunk.css.map": "/RandomFact/static/css/main.80f37d0f.chunk.css.map",
-    "static/js/2.23ce9665.chunk.js.LICENSE.txt": "/RandomFact/static/js/2.23ce9665.chunk.js.LICENSE.txt"
+    "main.css": "/www.randomfunfact.com/static/css/main.80f37d0f.chunk.css",
+    "main.js": "/www.randomfunfact.com/static/js/main.c1a0a095.chunk.js",
+    "main.js.map": "/www.randomfunfact.com/static/js/main.c1a0a095.chunk.js.map",
+    "runtime-main.js": "/www.randomfunfact.com/static/js/runtime-main.f0aed9b2.js",
+    "runtime-main.js.map": "/www.randomfunfact.com/static/js/runtime-main.f0aed9b2.js.map",
+    "static/js/2.23ce9665.chunk.js": "/www.randomfunfact.com/static/js/2.23ce9665.chunk.js",
+    "static/js/2.23ce9665.chunk.js.map": "/www.randomfunfact.com/static/js/2.23ce9665.chunk.js.map",
+    "index.html": "/www.randomfunfact.com/index.html",
+    "static/css/main.80f37d0f.chunk.css.map": "/www.randomfunfact.com/static/css/main.80f37d0f.chunk.css.map",
+    "static/js/2.23ce9665.chunk.js.LICENSE.txt": "/www.randomfunfact.com/static/js/2.23ce9665.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4fa94c9.js",
+    "static/js/runtime-main.f0aed9b2.js",
     "static/js/2.23ce9665.chunk.js",
     "static/css/main.80f37d0f.chunk.css",
     "static/js/main.c1a0a095.chunk.js"
