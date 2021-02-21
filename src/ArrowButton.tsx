@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void;
 }
 
-export const Button = (props: Props) =>
+export const ArrowButton = (props: Props) =>
   (
     <span className={"post-button"} onClick={() => {
       props.onClick()

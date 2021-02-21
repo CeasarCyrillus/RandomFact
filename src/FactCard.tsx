@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './Post.css';
-import {Button} from "./Button";
+import {ArrowButton} from "./ArrowButton";
 import factsJson from "./facts.json";
 
+const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 export const FactCard = () => {
   const getFactIndexFromUrl = () => {
     if (window.location.hash.length <= 0) {
@@ -40,13 +41,20 @@ export const FactCard = () => {
 
     <div className={"post-buttons-wrapper"}>
       {factIndex > 0 ?
-        <Button direction={"left"} onClick={() => {
+        <ArrowButton direction={"left"} onClick={() => {
           setFactIndex(factIndex - 1);
         }}/>
         : <></>
       }
+
+      <span className={"post-button"} onClick={() => {
+        setFactIndex(random(0, factsJson.numberOfFacts-1));
+      }}>
+        <i className="fas fa-redo" />
+      </span>
+
       {factIndex < (factsJson.numberOfFacts - 1) ?
-        <Button direction={"right"} onClick={() => {
+        <ArrowButton direction={"right"} onClick={() => {
           setFactIndex(factIndex + 1);
         }}/>
         : <></>
