@@ -1,6 +1,6 @@
 .spinning-loader-wrapper {
     color: var(--post-bg-color);
-    font-size: 15vw;
+    font-size: 10vh;
     position: fixed;
     top: 50%;
     left: 50%;
