@@ -1,4 +1,5 @@
 import React from "react";
+import "./Button.css";
 
 interface Props {
   direction: "left" | "right";

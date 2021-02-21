@@ -1,0 +1,12 @@
+.post-button {
+    background-color: var(--secondary-header-bg-color);
+    width: 30%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    filter: brightness(1.5);
+}
