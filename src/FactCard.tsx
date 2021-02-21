@@ -3,14 +3,14 @@ import './Post.css';
 import {Button} from "./Button";
 import factsJson from "./facts.json";
 
-const getFactIndexFromUrl = () => {
-  if (window.location.hash.length <= 0) {
-    return 0;
-  }
-  return Number(window.location.hash.slice(1))
-};
-
 export const FactCard = () => {
+  const getFactIndexFromUrl = () => {
+    if (window.location.hash.length <= 0) {
+      return 0;
+    }
+    return Number(window.location.hash.slice(1)) - 1;
+  };
+
   const [factIndex, setFactIndex] = useState<number>(getFactIndexFromUrl());
 
   useEffect(() => {
@@ -26,11 +26,14 @@ export const FactCard = () => {
   }, [])
 
   useEffect(() => {
-    window.location.hash = `#${factIndex}`;
+    window.location.hash = `#${factIndex + 1}`;
   }, [factIndex])
 
   const fact = factsJson.facts[factIndex];
   return <div className={"post-wrapper"}>
+    <div className={"post-link-wrapper"}>
+      <p>{factIndex + 1} / {factsJson.numberOfFacts}</p>
+    </div>
     <p className={"post-title"}>
       {fact.text}
     </p>
@@ -52,7 +55,7 @@ export const FactCard = () => {
 
     <div className={"post-link-wrapper"}>
       <a className={"post-link"} href={fact.source} target="_blank">
-        see source www.thefactsite.com
+        see source at www.thefactsite.com
       </a>
     </div>
   </div>;
