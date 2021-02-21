@@ -3,8 +3,6 @@ import './Post.css';
 import {Button} from "./Button";
 import factsJson from "./facts.json";
 
-const numberOfFacts = factsJson.facts.length;
-
 export const FactCard = () => {
   const [factId, setPostIndex] = useState<number>(0);
   const fact = (factsJson.facts)[factId];
@@ -20,7 +18,7 @@ export const FactCard = () => {
         }}/>
         : <></>
       }
-      {factId < (numberOfFacts - 1) ?
+      {factId < (factsJson.numberOfFacts - 1) ?
         <Button direction={"right"} onClick={() => {
           setPostIndex(factId + 1);
         }}/>
@@ -30,7 +28,7 @@ export const FactCard = () => {
 
     <div className={"post-link-wrapper"}>
       <a className={"post-link"} href={fact.source} target="_blank">
-        see source
+        see source www.thefactsite.com
       </a>
     </div>
   </div>;
