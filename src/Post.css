@@ -1,6 +1,6 @@
 .post-wrapper{
     width: 99vw;
-    max-width: 900px;
+    max-width: 700px;
     background-color: var(--fact-card-bg-color);
     border-radius: 15px;
     box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
@@ -9,13 +9,14 @@
 }
 
 .post-title{
-    color: var(--text-color);
-    font-size: 40px;
-    letter-spacing: 1px;
-    padding: 8% 4%;
+
+    font-size: 30px;
+    padding: 0 4% 4%;
     margin: 0;
-    text-shadow: 3px 4px rgba(0, 0, 0, .2);
+
+    color: var(--text-color);
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 2px;
 }
 
 .post-link-wrapper {

@@ -18,7 +18,7 @@ body{
   animation-name: movearound;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: 60s;
+  animation-duration: 80s;
 }
 
 @keyframes movearound {
@@ -26,7 +26,7 @@ body{
     background-position-x: 0;
   }
   to{
-    background-position-x: 100vw;
+    background-position-x: 900px;
   }
 }
 
@@ -35,5 +35,5 @@ body{
   --secondary-header-bg-color: #4D4B4B;
   --main-background-color: #BAC7BE;
   --fact-card-bg-color: #333232;
-  --text-color: #BAC7BE;
+  --text-color: #d2ded5;
 }
