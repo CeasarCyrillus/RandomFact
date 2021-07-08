@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import './Post.css';
-import {ArrowButton} from "./ArrowButton";
 import factsJson from "./facts.json";
+import {NavigationButtons} from "./NavigationButtons";
 
 const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
+
 export const FactCard = () => {
   const [factIndex, setFactIndex] = useState<number>(getFactIndexFromUrl() ?? random(0, factsJson.numberOfFacts - 1));
 
@@ -28,31 +29,17 @@ export const FactCard = () => {
     <div className={"post-link-wrapper"}>
       <p>{factIndex + 1} / {factsJson.numberOfFacts}</p>
     </div>
+    <NavigationButtons factIndex={factIndex} previousOnClick={() => {
+      setFactIndex(factIndex - 1);
+    }} randomOnClick={() => {
+      setFactIndex(random(0, factsJson.numberOfFacts - 1));
+    }} nextOnClick={() => {
+      setFactIndex(factIndex + 1);
+    }}/>
     <p className={"post-title"}>
       {fact.text}
     </p>
 
-    <div className={"post-buttons-wrapper"}>
-      {factIndex > 0 ?
-        <ArrowButton direction={"left"} onClick={() => {
-          setFactIndex(factIndex - 1);
-        }}/>
-        : <></>
-      }
-
-      <span className={"post-button"} onClick={() => {
-        setFactIndex(random(0, factsJson.numberOfFacts-1));
-      }}>
-        <i className="fas fa-redo" />
-      </span>
-
-      {factIndex < (factsJson.numberOfFacts - 1) ?
-        <ArrowButton direction={"right"} onClick={() => {
-          setFactIndex(factIndex + 1);
-        }}/>
-        : <></>
-      }
-    </div>
 
     <div className={"post-link-wrapper"}>
       <a className={"post-link"} href={fact.source} target="_blank">

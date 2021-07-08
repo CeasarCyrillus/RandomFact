@@ -20,10 +20,6 @@
     background-color: var(--primary-header-bg-color);
 }
 
-.secondary-header {
-    background-color: var(--secondary-header-bg-color)
-}
-
 .header-icon {
     margin-left: 10px;
     vertical-align: bottom;

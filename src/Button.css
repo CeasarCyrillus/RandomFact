@@ -1,12 +1,19 @@
 .post-button {
     background-color: var(--secondary-header-bg-color);
-    width: 30%;
+    width: 25%;
     text-align: center;
-    padding: 1%;
+    padding: 5px;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.15s;
+}
+
+.post-button-icon {
+    vertical-align: bottom;
+    margin-bottom: 3px;
 }
 
 .post-button:hover {
     filter: brightness(1.5);
+    transform: scale(1.05);
 }

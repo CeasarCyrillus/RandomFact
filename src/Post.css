@@ -3,15 +3,14 @@
     max-width: 700px;
     background-color: var(--fact-card-bg-color);
     border-radius: 15px;
-    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.2);
 
     margin: 15vh auto;
 }
 
 .post-title{
-
-    font-size: 30px;
-    padding: 0 4% 4%;
+    font-size: 25px;
+    padding: 0 5% 5%;
     margin: 0;
 
     color: var(--text-color);
@@ -31,12 +30,14 @@
 }
 
 .post-buttons-wrapper {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     color: var(--text-color);
     display: flex;
     justify-content: space-around;
 }
 
 .post-button {
-    font-size: 60px;
+    font-size: 40px;
+    margin-bottom: 40px;
 }

@@ -11,6 +11,6 @@ export const ArrowButton = (props: Props) =>
     <span className={"post-button"} onClick={() => {
       props.onClick()
     }}>
-      <i className={`fas fa-chevron-${props.direction}`}/>
+      <i className={`far post-button-icon fa-caret-square-${props.direction}`}/>
     </span>
   )
