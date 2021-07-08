@@ -25,8 +25,8 @@ export const FactCard = () => {
     window.location.hash = `#${factIndex + 1}`;
   }, [factIndex])
 
-  const fact = factsJson.facts[factIndex];
 
+  const fact = factsJson.facts[factIndex];
   const goToPreviousFact = () => {
     setFactIndex(factIndex - 1);
   };
