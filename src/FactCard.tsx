@@ -10,6 +10,7 @@ export const FactCard = () => {
 
   useEffect(() => {
     const onHashChange = () => {
+
       setFactIndex(getFactIndexFromUrl() ?? random(0, factsJson.numberOfFacts - 1));
     }
 
@@ -25,17 +26,27 @@ export const FactCard = () => {
   }, [factIndex])
 
   const fact = factsJson.facts[factIndex];
+
+  const goToPreviousFact = () => {
+    setFactIndex(factIndex - 1);
+  };
+
+  const goToRandomFact = () => {
+    setFactIndex(random(0, factsJson.numberOfFacts - 1));
+  };
+
+  const goToNextFact = () => {
+    setFactIndex(factIndex + 1);
+  };
   return <div className={"post-wrapper"}>
     <div className={"post-link-wrapper"}>
       <p>{factIndex + 1} / {factsJson.numberOfFacts}</p>
     </div>
-    <NavigationButtons factIndex={factIndex} previousOnClick={() => {
-      setFactIndex(factIndex - 1);
-    }} randomOnClick={() => {
-      setFactIndex(random(0, factsJson.numberOfFacts - 1));
-    }} nextOnClick={() => {
-      setFactIndex(factIndex + 1);
-    }}/>
+    <NavigationButtons
+      factIndex={factIndex}
+      previousOnClick={goToPreviousFact}
+      randomOnClick={goToRandomFact}
+      nextOnClick={goToNextFact}/>
     <p className={"post-title"}>
       {fact.text}
     </p>

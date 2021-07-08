@@ -7,10 +7,6 @@ interface Props {
 }
 
 export const ArrowButton = (props: Props) =>
-  (
-    <span className={"post-button"} onClick={() => {
-      props.onClick()
-    }}>
-      <i className={`far post-button-icon fa-caret-square-${props.direction}`}/>
-    </span>
-  )
+  <span className={"post-button"} onClick={props.onClick}>
+    <i className={`far post-button-icon fa-caret-square-${props.direction}`}/>
+  </span>
