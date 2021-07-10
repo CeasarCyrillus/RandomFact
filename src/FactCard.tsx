@@ -40,7 +40,7 @@ export const FactCard = () => {
   };
   return <div className={"post-wrapper"}>
     <div className={"post-link-wrapper"}>
-      <p>{factIndex + 1} / {factsJson.numberOfFacts}</p>
+      <h1>Fact #{factIndex + 1}</h1>
     </div>
     <NavigationButtons
       factIndex={factIndex}
@@ -51,12 +51,9 @@ export const FactCard = () => {
       {fact.text}
     </p>
 
-
-    <div className={"post-link-wrapper"}>
       <a className={"post-link"} href={fact.source} target="_blank">
         see source at www.thefactsite.com
       </a>
-    </div>
   </div>;
 }
 

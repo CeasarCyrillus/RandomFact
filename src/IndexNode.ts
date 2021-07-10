@@ -1,8 +1,10 @@
 export class IndexNode {
-	public readonly previousNode: number | null;
-	public readonly nextNode: number | null;
-	constructor(previousIndex: number | null, nextIndex: number | null) {
-		this.previousNode = previousIndex;
-		this.nextNode = nextIndex;
+	public readonly previousNode: IndexNode | null;
+	public readonly nextNode: IndexNode | null;
+	public readonly value: number | null;
+	constructor(value: number | null, previousNode: IndexNode | null, nextNode: IndexNode | null) {
+		this.value = value;
+		this.previousNode = previousNode;
+		this.nextNode = nextNode;
 	}
 }
