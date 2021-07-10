@@ -11,19 +11,10 @@ body{
   background-color: var(--main-background-color);
 }
 
-@keyframes movearound {
-  from{
-    background-position-x: 0;
-  }
-  to{
-    background-position-x: 900px;
-  }
-}
-
 :root {
-  --primary-header-bg-color: #333232;
-  --secondary-header-bg-color: #4D4B4B;
-  --main-background-color: #BAC7BE;
-  --fact-card-bg-color: #333232;
-  --text-color: #d2ded5;
+  --primary-header-bg-color: #B5CDA3;
+  --button-bg-color: #B5CDA3;
+  --main-background-color: #C9E4C5;
+  --text-color: #3A6351;
+  --fact-card-bg-color: var(--primary-header-bg-color);
 }

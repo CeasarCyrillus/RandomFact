@@ -1,5 +1,6 @@
 .post-button {
-    background-color: var(--secondary-header-bg-color);
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
     width: 25%;
     text-align: center;
     padding: 5px;
