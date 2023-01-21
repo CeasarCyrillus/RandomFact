@@ -17,4 +17,6 @@ body{
   --main-background-color: #924551;
   --text-color: #3A6351;
   --fact-card-bg-color: var(--primary-header-bg-color);
+  --secondary-header-bg-color: #F6DE16;
+  --secondary-header-text-color: black;
 }

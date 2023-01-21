@@ -14,10 +14,18 @@
 
 .primary-header{
     margin: 0;
+    background-color: var(--primary-header-bg-color);
 }
 
-.primary-header{
-    background-color: var(--primary-header-bg-color);
+.secondary-header{
+    margin: 0;
+    padding: 20px;
+    background-color: var(--secondary-header-bg-color);
+}
+
+.secondary-header-text {
+    margin: 0;
+    color: var(--secondary-header-text-color);
 }
 
 .header-icon {
